@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="br.ifmg.edu.bsi.progmovel.calculadorahp.CalculadoraViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/buttonBackspace"
+            style="@style/Widget.Material3.Button.TextButton.Icon"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            android:onClick="@{() -> vm.apagar()}"
+            android:text="←"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button16" />
+
+        <Button
+            android:id="@+id/buttonN"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="204dp"
+            android:backgroundTint="@color/botaoFinanceiro"
+            android:text="n"
+            android:onClick="@{() -> vm.n()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button16"
+            app:layout_constraintStart_toStartOf="@+id/button13" />
+
+        <Button
+            android:id="@+id/buttonI"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="204dp"
+            android:backgroundTint="@color/botaoFinanceiro"
+            android:text="i"
+            android:onClick="@{() -> vm.i()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button12"
+            app:layout_constraintStart_toStartOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/buttonPV"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="204dp"
+            android:backgroundTint="@color/botaoFinanceiro"
+            android:text="PV"
+            android:onClick="@{() -> vm.pv()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button11"
+            app:layout_constraintEnd_toStartOf="@+id/buttonI"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/buttonFV"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="74dp"
+            android:layout_height="51dp"
+            android:layout_marginBottom="208dp"
+            android:backgroundTint="@color/botaoFinanceiro"
+            android:text="FV"
+            android:onClick="@{() -> vm.fv()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/button10"
+            app:layout_constraintStart_toStartOf="@+id/button" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:onClick="@{() -> vm.sete()}"
+            app:layout_constraintBottom_toTopOf="@+id/button4"
+            app:layout_constraintStart_toStartOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:onClick="@{() -> vm.oito()}"
+            app:layout_constraintBottom_toTopOf="@+id/button5"
+            app:layout_constraintStart_toStartOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:onClick="@{() -> vm.nove()}"
+            app:layout_constraintBottom_toTopOf="@+id/button6"
+            app:layout_constraintStart_toStartOf="@+id/button6" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:onClick="@{() -> vm.quatro()}"
+            app:layout_constraintBottom_toTopOf="@+id/button7"
+            app:layout_constraintStart_toStartOf="@+id/button7" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:onClick="@{() -> vm.cinco()}"
+            app:layout_constraintBottom_toTopOf="@+id/button8"
+            app:layout_constraintStart_toStartOf="@+id/button8" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:onClick="@{() -> vm.seis()}"
+            app:layout_constraintBottom_toTopOf="@+id/button9"
+            app:layout_constraintStart_toStartOf="@+id/button9" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.um()}"
+            android:text="1"
+            app:layout_constraintBottom_toTopOf="@+id/button10"
+            app:layout_constraintStart_toStartOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:onClick="@{() -> vm.dois()}"
+            app:layout_constraintBottom_toTopOf="@+id/button11"
+            app:layout_constraintStart_toStartOf="@+id/button11" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:onClick="@{() -> vm.tres()}"
+            app:layout_constraintBottom_toTopOf="@+id/button12"
+            app:layout_constraintStart_toStartOf="@+id/button12" />
+
+        <Button
+            android:id="@+id/button10"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="108dp"
+            android:onClick="@{() -> vm.zero()}"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:onClick="@{() -> vm.decimal()}"
+            android:text=","
+            app:layout_constraintBottom_toBottomOf="@+id/button10"
+            app:layout_constraintEnd_toStartOf="@+id/button12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:onClick="@{() -> vm.enter()}"
+            app:iconPadding="0dp"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            app:layout_constraintBottom_toBottomOf="@+id/button11"
+            app:layout_constraintEnd_toStartOf="@+id/button16"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button11" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> vm.subtrai()}"
+            android:text="-"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            app:layout_constraintBottom_toTopOf="@+id/button14"
+            app:layout_constraintStart_toStartOf="@+id/button14" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            android:onClick="@{() -> vm.soma()}"
+            app:layout_constraintBottom_toTopOf="@+id/button15"
+            app:layout_constraintStart_toStartOf="@+id/button15" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            android:onClick="@{() -> vm.multiplica()}"
+            app:layout_constraintBottom_toTopOf="@+id/button16"
+            app:layout_constraintStart_toStartOf="@+id/button16" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/botaoNaoNumerico"
+            android:onClick="@{() -> vm.divide()}"
+            android:text="/"
+            app:layout_constraintBottom_toBottomOf="@+id/button12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button12" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="445dp"
+            android:layout_height="99dp"
+            android:layout_marginBottom="332dp"
+            android:ems="10"
+            android:fontFamily="monospace"
+            android:inputType="text"
+            android:text="@{vm.visor}"
+            android:textAlignment="textEnd"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/button11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
