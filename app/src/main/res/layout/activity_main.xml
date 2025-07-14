@@ -88,8 +88,8 @@
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="56dp"
             android:layout_height="wrap_content"
-            android:text="7"
             android:onClick="@{() -> vm.sete()}"
+            android:text="7"
             app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintStart_toStartOf="@+id/button4" />
 
@@ -118,8 +118,9 @@
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="56dp"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:layout_marginBottom="4dp"
             android:onClick="@{() -> vm.quatro()}"
+            android:text="4"
             app:layout_constraintBottom_toTopOf="@+id/button7"
             app:layout_constraintStart_toStartOf="@+id/button7" />
 
@@ -257,9 +258,9 @@
 
         <EditText
             android:id="@+id/editTextText"
-            android:layout_width="445dp"
-            android:layout_height="99dp"
-            android:layout_marginBottom="332dp"
+            android:layout_width="389dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="308dp"
             android:ems="10"
             android:fontFamily="monospace"
             android:inputType="text"
